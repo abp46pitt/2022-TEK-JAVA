@@ -1,0 +1,17 @@
+.menu_container{
+    display: flex;
+    padding:20px;
+    font-family: cursive;
+    font-weight: 300;
+    color: white;
+    border: solid 5px green;
+}
+
+.menu_item{
+    flex:1;
+    border: solid 3px rgb(62,0,128);
+}
+
+.more{
+    flex:2;
+}
