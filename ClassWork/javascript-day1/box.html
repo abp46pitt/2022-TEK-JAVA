@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Open terminal to see the outputs!</h1>
+    <input type="text" id="width1" placeholder="width">
+    <input type="text" id="height1" placeholder="height">
+    <button id="button1">make box!</button>
+    <br><br>
+    <input type="text" id="width2" placeholder="width">
+    <input type="text" id="height2" placeholder="height">
+    <button id="button2">make checkerboard!</button>
+    <br><br>
+    <input type="text" id="size" placeholder="size">
+    <button id="button3">Make Cross!</button>
+    <br><br>
+    <input type="text" id="size2" placeholder="size">
+    <button id="button4">Make Lower Triangle!</button>
+    <br><br>
+    <input type="text" id="size3" placeholder="size">
+    <button id="button5">Make Upper Triangle!</button>
+    <br><br>
+    <input type="text" id="width3" placeholder="width">
+    <input type="text" id="height3" placeholder="height">
+    <button id="button6">make Trapezoid!</button>
+    <script>
+        document.getElementById('button1').addEventListener('click', () => {
+            let width = document.getElementById('width1').value;
+            let height = document.getElementById('height1').value;
+            if(!width || !height){
+                console.log("No value given");
+                return;
+            }
+            for (let i = 0; i < Number(height); i++) {
+                let string = "";
+                for (let j = 0; j < Number(width); j++) {
+                    string += "*";
+                }
+                console.log(string);
+            }
+        });
+
+        document.getElementById('button2').addEventListener('click', () => {
+            let width = document.getElementById('width2').value;
+            let height = document.getElementById('height2').value;
+            if(!width || !height){
+                console.log("No value given");
+                return;
+            }
+            for (let i = 1; i <= Number(height); i++) {
+                if (i % 2 == 0) {
+                    let string = " ";
+                    for (let j = 0; j < Number(width) - 1; j++) {
+                        string += "* ";
+                    }
+                    console.log(string);
+                } else {
+                    let string = "*";
+                    for (let j = 0; j < Number(width) - 1; j++) {
+                        string += " *";
+                    }
+                    console.log(string);
+                }
+            }
+        });
+
+        document.getElementById('button3').addEventListener('click', () => {
+            let size = Number(document.getElementById('size').value);
+            if(!size){
+                console.log("No value given");
+                return;
+            }
+            let left = 1;
+            let right = size;
+            for(let i =0; i<size; i++){
+                let string = "";
+                for(let j = 1; j<=size; j++){
+                    if(j===left || j===right){
+                        string+="*";
+                    }else{
+                        string+=" ";
+                    }
+                }
+                right--;
+                left++;
+                console.log(string);
+            }
+        });
+
+        document.getElementById('button4').addEventListener('click', () => {
+            let size = Number(document.getElementById('size2').value);
+            if(!size){
+                console.log("No value given");
+                return;
+            }
+            for(let i =1; i<=size; i++){
+                let string = "";
+                for(let j = 0; j<i; j++){
+                    string+="*";
+                }
+                console.log(string);
+            }
+        });
+
+        document.getElementById('button5').addEventListener('click', () => {
+            let size = Number(document.getElementById('size3').value);
+            if(!size){
+                console.log("No value given");
+                return;
+            }
+            let side = 0;
+            for(let i =0; i<size; i++){
+                let string = "";
+                for(let j = 0; j<side; j++){
+                    string+=" ";
+                }
+                for(let j = 0; j<size-side; j++){
+                    string+="*";
+                }
+                side++;
+                console.log(string);
+            }
+        });
+
+        document.getElementById('button6').addEventListener('click', () => {
+            let width = document.getElementById('width3').value;
+            let height = document.getElementById('height3').value;
+            if(!width || !height){
+                console.log("No value given");
+                return;
+            }
+            if(height>(width/2)){
+                console.log("impossible shape!");
+                return;
+            }
+            let side = 0;
+            for(let i =0; i<height; i++){
+                let string = "";
+                for(let j = 0; j<side; j++){
+                    string+=" ";
+                }
+                for(let j = 0; j<width-(side*2); j++){
+                    string+="*";
+                }
+                for(let j = 0; j<side; j++){
+                    string+=" ";
+                }
+                side++;
+                console.log(string);
+            }
+        });
+    </script>
+</body>
+
+</html>
