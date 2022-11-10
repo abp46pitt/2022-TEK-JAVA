@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>objects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <script>
+        //simple object
+        let me = {firstName: "Andrew", lastName: "Potter"};
+
+        console.log(`${me.firstName} ${me.lastName}`);
+        console.log(`${me["firstName"]} ${me["lastName"]}`);
+
+        //more advanced object with sub object and array
+        let student = {
+            firstName: "Steve",
+            lastName: "Meta",
+            age: 24,
+            class: {
+                name: "Physics",
+                time: "Noon"
+            },
+            arr: ["abc","def","ghi"]
+        }
+
+        console.log(student.class.name);
+        console.log(student.arr[0]);
+
+        //reassign value of firstname
+        student.firstName = "Brian";
+
+        //delete attribute
+        delete student.age;
+
+        //loop over object
+        for(key in student){
+            //key gets the name of the field, student[key] accesses the value
+            console.log(`${key} = ${student[key]}`);
+        }
+
+        let a = new Array(10);
+        a[0] = 0;
+        a[1] = "String";
+        a[2] = 1;
+        a.length = 4;
+        console.log(a);
+
+        
+    </script>
+</body>
+
+</html>
