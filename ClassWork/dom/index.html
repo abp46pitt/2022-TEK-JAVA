@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <style>
+        .list-items {
+            background-color: green;
+        }
+
+        .list-items-bg {
+            background-color: aquamarine;
+        }
+
+        .page-title-css{
+            background-color: red;
+        }
+    </style>
+    <!-- <header id="main-header">
+        <div class="container">
+            <h1 id="header-title"> Selecting Elements By ID</h1>
+            An ID should be unique within a page. However, if more than one element with the specified ID exists, the
+            getElementById() method returns the first element in the source code
+        </div>
+    </header>
+    <div>
+        getElementsByName() will also return elements that have an id attribute with the specified value. For
+        compatibility, you should be careful not to use the same string as both a name and an ID.
+    </div>
+    <ul id="items" class="list-group">
+        <li name="list-group-item">Item 1</li>
+        <li name="list-group-item">Item 2</li>
+        <li name="list-group-item">Item 3</li>
+    </ul>
+    <script>
+        let items = document.getElementsByName('list-group-item');
+        for (i in items) { console.log(items[i]); }
+    </script> -->
+
+    <h1>Children Nodes</h1>
+    <ul>
+        <li class="list-items">firstElementChild</li>
+        <li class="list-items">firstChild</li>
+        <li class="list-items">childNodes</li>
+        <li class="list-items">children</li>
+        <li class="list-items">lastChild</li>
+        <li class="list-items">lastElementChild</li>
+    </ul>
+    <div>Use the children property to return any child element of a specified element. To return the last child element
+        of a specified element, use the lastElementChild property.</div>
+
+    <form>
+        <input type="text" name="email" id="emailId">
+    </form>
+
+    <script>
+        console.log(document.querySelector('ul').firstElementChild);
+        console.log(document.querySelector('ul').lastElementChild);
+        console.log(document.querySelector('ul').childNodes);
+        let children = document.querySelector('ul').childNodes;
+        document.querySelector('ul').childNodes[3].classList.add('list-items-bg');
+
+        // add node
+        let newElement = document.createElement('li');
+        newElement.textContent = "New content";
+
+        document.querySelector('ul').appendChild(newElement);
+
+        // remove node
+        document.querySelector('ul').removeChild(document.querySelector('ul').childNodes[1]);
+
+        // add buton to form
+        let button = document.createElement('button');
+        button.textContent = "New Button";
+        button.setAttribute('type', 'button');
+
+        document.querySelector('form').appendChild(button);
+
+        // when button is clicked console log value
+        button.addEventListener('click', () => {
+            console.log(document.getElementById('emailId').value);
+        });
+
+        // button that adds style 
+        let newButton = document.createElement('button');
+        newButton.textContent = "toggle class";
+        newButton.setAttribute('type', 'button');
+
+        newButton.addEventListener('click', () => {
+            document.querySelector('h1').classList.toggle("page-title-css");
+        });
+
+        document.querySelector('body').appendChild(newButton);
+    </script>
+
+</body>
+
+</html>
