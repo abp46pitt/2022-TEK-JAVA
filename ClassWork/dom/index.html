@@ -64,31 +64,39 @@
 
         // add node
         let newElement = document.createElement('li');
-        newElement.textContent = "New content";
+        newElement.innerText = "New content";
 
-        document.querySelector('ul').appendChild(newElement);
+        let ul = document.querySelector('ul');
+
+        ul.appendChild(newElement);
 
         // remove node
-        document.querySelector('ul').removeChild(document.querySelector('ul').childNodes[1]);
+        ul.removeChild(ul.childNodes[1]);
 
         // add buton to form
         let button = document.createElement('button');
-        button.textContent = "New Button";
+        button.textContent = "Log this value";
         button.setAttribute('type', 'button');
 
         document.querySelector('form').appendChild(button);
 
         // when button is clicked console log value
         button.addEventListener('click', () => {
-            console.log(document.getElementById('emailId').value);
+            let emailId = document.getElementById('emailId');
+            console.log(emailId.value);
+            emailId.value = "";
         });
 
         // button that adds style 
         let newButton = document.createElement('button');
-        newButton.textContent = "toggle class";
+        newButton.innerText = "toggle class";
         newButton.setAttribute('type', 'button');
 
-        newButton.addEventListener('click', () => {
+        newButton.addEventListener('mouseover', () => {
+            document.querySelector('h1').classList.toggle("page-title-css");
+        });
+
+        newButton.addEventListener('mouseout', () => {
             document.querySelector('h1').classList.toggle("page-title-css");
         });
 

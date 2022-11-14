@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <style>
+        .border-red {
+            border-color: red;
+            border-radius: 25px;
+        }
+    </style>
+    <h1>Form example</h1>
+    <form action="form.html">
+        <label for="fname">First Name</label><input type="text" name="fname" id="fname"><br><br>
+        <label for="lname">Last Name</label><input type="text" name="lname" id="lname"><br><br>
+        <label for="phone">Phone #</label><input type="text" name="phone" id="phone"><br><br>
+        <input type="submit">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', () => {
+
+            event.preventDefault();
+
+            const phone = document.getElementById("phone");
+            const fname = document.getElementById("fname");
+            const lname = document.getElementById("lname");
+
+            if (!validatePhone(phone.value)) {
+                addWarning("Invalid Phone Number", "warning1");
+                addBorder(phone)
+            } else {
+                document.getElementById("warning1").remove();
+                removeBorder(phone);
+                phone.value = "";
+            }
+
+            if (!validateNames(fname.value, lname.value)) {
+                addWarning("Invalid Names", "warning2");
+                addBorder(fname);
+                addBorder(lname);
+            } else {
+                document.getElementById("warning2").remove();
+                removeBorder(fname);
+                removeBorder(lname);
+                fname.value = "";
+                lname.value = "";
+            }
+
+        });
+
+        function addWarning(message, warning) {
+            let newElement = document.createElement('p');
+            newElement.innerHTML = message;
+            newElement.style.color = "red";
+            newElement.id = warning;
+            document.querySelector('form').appendChild(newElement);
+        }
+
+        function validatePhone(str) {
+            str = str.replace(/\s+/g, '');
+            return /^\d+$/.test(str);
+        }
+
+        function validateNames(fname, lname) {
+            return (!fname || !lname) ? false : true;
+        }
+
+        function addBorder(element) {
+            element.classList.add("border-red");
+        }
+
+        function removeBorder(element) {
+            element.classList.remove("border-red");
+        }
+    </script>
+</body>
+
+</html>
