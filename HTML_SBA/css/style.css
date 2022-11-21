@@ -1,0 +1,151 @@
+body {
+    background-color: rgb(35,73,158);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+}
+
+.center {
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin: 0%;
+}
+
+.nav {
+    background-color: rgb(242,212,102);
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+li {
+    padding: 15px 10% 15px 10%;
+    white-space: nowrap;
+}
+
+li:hover {
+    background-color: rgb(236, 194, 43);
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: larger;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Lato', sans-serif;
+}
+
+.left {
+    width: 50%;
+    height: fit-content;
+    margin: 0;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    height: auto;
+    margin: 0;
+    float: right;
+    padding-top: 5%;
+}
+
+.right h2 {
+    text-align: center;
+}
+
+.right table {
+    margin: auto auto;
+}
+
+.input {
+    padding-right: 15px;
+}
+
+.button button {
+    margin: auto;
+    display: block;
+    padding: 10px 10px 10px 10px;
+}
+
+.button {
+    padding: 15px 15px;
+}
+
+.form {
+    margin-top: 30%;
+    border: solid black 3px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: rgb(241, 241, 241);
+}
+
+.leftcenter h2 {
+    text-align: center;
+}
+
+.leftcenter {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.leftcenter p {
+    font-size: large;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    height: fit-content;
+    border-top: solid black 2px;
+}
+
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.footer h2{
+    text-align: center;
+}
+
+.picture{
+    object-fit: cover;
+    float: none;
+}
+
+.info p{
+    font-size: large;
+}
+
+.info h2{
+    text-align: center;
+}
+
+.info{
+    padding: 0 2% 0 2%;
+}

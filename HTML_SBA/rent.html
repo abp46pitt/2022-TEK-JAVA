@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rent a bike</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rent.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        #error {
+            text-align: center;
+        }
+    </style>
+    <div class="center">
+        <header>
+            <div class="title">
+                <h1>Recumbent Bike Rental</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./bikes.html">Our Bikes</a></li>
+                    <li><a href="#">Rent a Bike</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="left">
+            <div class="leftcenter">
+                <h2>Terms of Service</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
+                    Ullamcorper sit amet risus nullam eget felis eget. Auctor elit sed vulputate mi sit amet mauris. At
+                    volutpat diam ut venenatis tellus in metus. Tristique senectus et netus et. Ut aliquam purus sit
+                    amet luctus. Leo in vitae turpis massa sed elementum tempus egestas sed. Amet tellus cras adipiscing
+                    enim eu turpis egestas. Egestas dui id ornare arcu odio ut sem. Adipiscing elit duis tristique
+                    sollicitudin nibh sit amet. Mauris in aliquam sem fringilla ut morbi tincidunt. Commodo elit at
+                    imperdiet dui accumsan sit. Risus viverra adipiscing at in tellus. Vel eros donec ac odio. Erat
+                    imperdiet sed euismod nisi porta lorem. Venenatis a condimentum vitae sapien pellentesque habitant
+                    morbi tristique senectus. Tempus iaculis urna id volutpat lacus laoreet non. Purus non enim praesent
+                    elementum facilisis leo.
+
+                    Feugiat nibh sed pulvinar proin gravida. Id interdum velit laoreet id donec ultrices tincidunt arcu.
+                    Curabitur vitae nunc sed velit dignissim sodales ut. Odio ut sem nulla pharetra diam. Scelerisque
+                    eleifend donec pretium vulputate sapien nec sagittis aliquam. Ac feugiat sed lectus vestibulum
+                    mattis ullamcorper velit. In nibh mauris cursus mattis molestie a. Quis varius quam quisque id diam
+                    vel quam elementum pulvinar. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Luctus
+                    accumsan tortor posuere ac ut consequat semper viverra nam. Tortor consequat id porta nibh venenatis
+                    cras sed felis. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Fringilla
+                    phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Integer quis auctor elit sed
+                    vulputate mi sit. Scelerisque mauris pellentesque pulvinar pellentesque. Aliquam sem et tortor
+                    consequat id porta nibh venenatis cras. Malesuada fames ac turpis egestas maecenas pharetra. Auctor
+                    augue mauris augue neque gravida in fermentum et. Mattis vulputate enim nulla aliquet porttitor
+                    lacus luctus accumsan. Blandit turpis cursus in hac habitasse.
+
+                    Velit euismod in pellentesque massa placerat duis ultricies. Lectus vestibulum mattis ullamcorper
+                    velit sed ullamcorper morbi. Et ligula ullamcorper malesuada proin. Nunc sed augue lacus viverra
+                    vitae congue. Ipsum consequat nisl vel pretium. Sollicitudin ac orci phasellus egestas tellus. Et
+                    ligula ullamcorper malesuada proin libero nunc consequat. Id porta nibh venenatis cras sed felis
+                    eget. Turpis nunc eget lorem dolor sed. Diam donec adipiscing tristique risus nec feugiat in
+                    fermentum.</p>
+            </div>
+        </div>
+        <div class="rightform">
+            <h2>Rent a Bike</h2>
+            <form action="#" method="get">
+                <table class="table1">
+                    <tr>
+                        <td><label for="type">Select your bike:</label></td>
+                        <td><select name="type" id="type">
+                                <option value="default">choose here</option>
+                                <option value="vrex">V-Rex</option>
+                                <option value="tirex">Ti-Rex</option>
+                                <option value="screamer">Screamer</option>
+                                <option value="stratus">Stratus</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sdate">Start Date:</label></td>
+                        <td><input type="date" name="sdate" id="sdate"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edate">End Date:</label></td>
+                        <td><input type="date" name="edate" id="edate"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button" id="button">Submit</button></td>
+                    </tr>
+                    <tr>
+                        <td id="error" colspan="2"></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="confirmation" id="table">
+                <table class="table2">
+                    <tr>
+                        <th colspan="2">Information submitted:</th>
+                    </tr>
+                    <tr>
+                        <th>Bike Selected:</th>
+                        <td id="0"></td>
+                    </tr>
+                    <tr>
+                        <th>Start Date:</th>
+                        <td id="1"></td>
+                    </tr>
+                    <tr>
+                        <th>End Date:</th>
+                        <td id="2"></td>
+                    </tr>
+                    <tr>
+                        <th>Days:</th>
+                        <td id="3"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Follow Us!</h2>
+            <ul>
+                <li><img src="./images/facebook.png" alt="facebook"></li>
+                <li><img src="./images/twitter.png" alt="twitter"></li>
+                <li><img src="./images/instagram.png" alt="instagram"></li>
+                <li><img src="./images/LinkedIn.png" alt="LinkedIn"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./JavaScript/rent.js" async defer></script>
+</body>
+
+</html>

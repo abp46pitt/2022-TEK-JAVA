@@ -1,0 +1,3 @@
+Created by Andrew Potter
+
+This website is a first attempt at my capstone project: a recumbent bike rental service. My website contains 3 pages: a home page with signup, list of bikes, and a form to rent one of our bikes. All forms contain validation unique to the specific forms, including logic to guarantee that the dates selected for rental are valid. Color scheme is always a work in progress but blue and gold create a powerful statement about the site. 

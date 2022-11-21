@@ -1,0 +1,33 @@
+.rightform{
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    float: right;
+}
+
+.rightform h2{
+    text-align: center;
+}
+
+th, td{
+    text-align: left;
+}
+.confirmation{
+    width: 100%;
+    margin-top: 15%;
+    height: 10%;
+}
+
+.rightform button{
+    margin: auto;
+    display: block;
+    padding: 5px 10px 5px 10px;
+}
+
+.table1{
+    margin: auto auto;
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(241, 241, 241);
+    border: solid black 2px;
+    border-collapse: collapse;
+}
